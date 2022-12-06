@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('hey world');
 
 // 2. Use a method of that object to generate a random number of customers per hour. Objects/Math/random
 
@@ -11,6 +11,12 @@
 
 // 6. Calculating the sum of these hourly totals; your output for each location should look like this:
 
+
+// source: MDN Web Docs
+function getRandomIntInclusive(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 
@@ -18,14 +24,19 @@ let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 
 // 1. Store the min/max hourly customers, and the average cookies per customer, in object properties.
 let seattle = {
-  name: 'Seattle',
   minCust: 23,
   maxCust: 65,
   avgCookieSale: 6.3,
   cookiesBought: [],
   customersPerHour: [],
- 
+
+  custPerHour: function () {
+    let currentCust = getRandomIntInclusive(this.minCust, this.maxCust);
+
+  }
 };
+
+
 
 
 let tokyo = {
@@ -65,3 +76,4 @@ let lima = {
   customersPerHour: [],
 };
 
+let sectionElement = document.getElementById('stores');
