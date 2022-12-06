@@ -24,20 +24,29 @@ let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 
 // 1. Store the min/max hourly customers, and the average cookies per customer, in object properties.
 let seattle = {
+  name: 'Seattle',
   minCust: 23,
   maxCust: 65,
   avgCookieSale: 6.3,
   cookiesBought: [],
-  customersPerHour: [],
-
+  total: 0,
   custPerHour: function () {
-    let currentCust = getRandomIntInclusive(this.minCust, this.maxCust);
-
+    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+  },
+  cookieSales: function () {
+    for (let i = 0; i < hours.length; i++) {
+      let cookiesNeeded = this.custPerHour() * this.avgCookieSale;
+      this.cookiesBought.push(cookiesNeeded);
+      this.total = this.total + cookiesNeeded;
+    }
+  },
+  render: function () {
+    this.cookieSales();
+    let ulElem = document.createElement('ul');
   }
-};
+}
 
-
-
+custPerHour -> 30 ppl buy 6.3 -- custPerHour * avgCookieSale
 
 let tokyo = {
   name: 'Tokyo',
@@ -46,7 +55,8 @@ let tokyo = {
   avgCookieSale: 1.2,
   cookiesBought: [],
   customersPerHour: [],
-};
+}
+
 
 let dubai = {
   name: 'Dubai',
@@ -55,25 +65,5 @@ let dubai = {
   avgCookieSale: 3.7,
   cookiesBought: [],
   customersPerHour: [],
-};
+},
 
-let paris = {
-  name: 'Paris',
-  minCust: 20,
-  maxCust: 38,
-  avgCookieSale: 2.3,
-  cookiesBought: [],
-  customersPerHour: [],
-
-};
-
-let lima = {
-  name: 'Lima',
-  minCust: 2,
-  maxCust: 16,
-  avgCookieSale: 4.6,
-  cookiesBought: [],
-  customersPerHour: [],
-};
-
-let sectionElement = document.getElementById('stores');
