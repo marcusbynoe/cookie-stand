@@ -24,18 +24,18 @@ let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 
 // 1. Store the min/max hourly customers, and the average cookies per customer, in object properties.
 
-let seattle ={
+let seattle = {
   name: 'Seattle',
   minCust: 23,
   maxCust: 65,
   avgCookieBought: 6.3,
   cookiesBought: [],
   total: 0,
-  customerPerHour: function(){
+  customerPerHour: function () {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   },
-  cookieSales: function(){
-    for(let i = 0; i < hours.length; i++){
+  cookieSales: function () {
+    for (let i = 0; i < hours.length; i++) {
       let cookiesNeeded = this.customerPerHour() * this.avgCookieBought;
       this.cookiesBought.push(cookiesNeeded);
       this.total = this.total + cookiesNeeded;
@@ -44,18 +44,18 @@ let seattle ={
 };
 
 
-let tokyo ={
+let tokyo = {
   name: 'Tokyo',
   minCust: 3,
   maxCust: 24,
   avgCookieBought: 1.2,
   cookiesBought: [],
   total: 0,
-  customerPerHour: function(){
+  customerPerHour: function () {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   },
-  cookieSales: function(){
-    for(let i = 0; i < hours.length; i++){
+  cookieSales: function () {
+    for (let i = 0; i < hours.length; i++) {
       let cookiesNeeded = this.customerPerHour() * this.avgCookieBought;
       this.cookiesBought.push(cookiesNeeded);
       this.total = this.total + cookiesNeeded;
@@ -63,18 +63,18 @@ let tokyo ={
   }
 };
 
-let dubai ={
+let dubai = {
   name: 'Dubai',
   minCust: 11,
   maxCust: 38,
   avgCookieBought: 3.7,
   cookiesBought: [],
   total: 0,
-  customerPerHour: function(){
+  customerPerHour: function () {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   },
-  cookieSales: function(){
-    for(let i = 0; i < hours.length; i++){
+  cookieSales: function () {
+    for (let i = 0; i < hours.length; i++) {
       let cookiesNeeded = this.customerPerHour() * this.avgCookieBought;
       this.cookiesBought.push(cookiesNeeded);
       this.total = this.total + cookiesNeeded;
@@ -82,18 +82,18 @@ let dubai ={
   }
 };
 
-let paris ={
+let paris = {
   name: 'Paris',
   minCust: 20,
   maxCust: 38,
   avgCookieBought: 2.3,
   cookiesBought: [],
   total: 0,
-  customerPerHour: function(){
+  customerPerHour: function () {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   },
-  cookieSales: function(){
-    for(let i = 0; i < hours.length; i++){
+  cookieSales: function () {
+    for (let i = 0; i < hours.length; i++) {
       let cookiesNeeded = this.customerPerHour() * this.avgCookieBought;
       this.cookiesBought.push(cookiesNeeded);
       this.total = this.total + cookiesNeeded;
@@ -101,18 +101,18 @@ let paris ={
   }
 };
 
-let lima ={
+let lima = {
   name: 'Lima',
   minCust: 2,
   maxCust: 16,
   avgCookieBought: 4.6,
   cookiesBought: [],
   total: 0,
-  customerPerHour: function(){
+  customerPerHour: function () {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   },
-  cookieSales: function(){
-    for(let i = 0; i < hours.length; i++){
+  cookieSales: function () {
+    for (let i = 0; i < hours.length; i++) {
       let cookiesNeeded = this.customerPerHour() * this.avgCookieBought;
       this.cookiesBought.push(cookiesNeeded);
       this.total = this.total + cookiesNeeded;
