@@ -26,20 +26,20 @@ function City(name, minCust, maxCust, avgCookieBought) {
   this.total = 0;
 };
 
-// *****PROTOTYPE METHODS******
-
-City.prototype.getTotal = function () {
-  return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-};
-
-//****** EXECUTABLE CODE ***********
-
 let seattle = new City('Seattle', 23, 65, 6.3);
 let tokyo = new City('Tokyo', 3, 24, 1.2);
 let dubai = new City('Dubai', 11, 38, 3.7);
 let paris = new City('Paris', 20, 38, 2.3);
 let lima = new City('Lima', 2, 16, 4.6);
 
+
+// *****PROTOTYPE METHODS******
+
+City.prototype.getTotal = function () {
+  return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+};
+
+City.prototype.cookie
 // **** TABLE *****
 
 
@@ -62,39 +62,39 @@ let lima = new City('Lima', 2, 16, 4.6);
 // 1. Store the min/max hourly customers, and the average cookies per customer, in object properties.
 
 // let seattle = {
-  //   name: 'Seattle',
-  //   minCust: 23,
-  //   maxCust: 65,
-  //   avgCookieBought: 6.3,
-  //   cookiesBought: [],
-  //   total: 0,
-  //   customerPerHour: function () {
-    //     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-    //   },
-    //   cookieSales: function () {
-      //     for (let i = 0; i < hours.length; i++) {
-        //       let cookiesNeeded = this.customerPerHour() * this.avgCookieBought;
-        //       this.cookiesBought.push(cookiesNeeded);
-        //       this.total = this.total + cookiesNeeded;
+//   name: 'Seattle',
+//   minCust: 23,
+//   maxCust: 65,
+//   avgCookieBought: 6.3,
+//   cookiesBought: [],
+//   total: 0,
+//   customerPerHour: function () {
+//     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+//   },
+//   cookieSales: function () {
+//     for (let i = 0; i < hours.length; i++) {
+//       let cookiesNeeded = this.customerPerHour() * this.avgCookieBought;
+//       this.cookiesBought.push(cookiesNeeded);
+//       this.total = this.total + cookiesNeeded;
 //     }
 //   }
 // };
 
 
 // let tokyo = {
-  //   name: 'Tokyo',
-  //   minCust: 3,
-  //   maxCust: 24,
-  //   avgCookieBought: 1.2,
-  //   cookiesBought: [],
-  //   total: 0,
-  //   customerPerHour: function () {
-    //     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-    //   },
-    //   cookieSales: function () {
-      //     for (let i = 0; i < hours.length; i++) {
-        //       let cookiesNeeded = this.customerPerHour() * this.avgCookieBought;
-        //       this.cookiesBought.push(cookiesNeeded);
+//   name: 'Tokyo',
+//   minCust: 3,
+//   maxCust: 24,
+//   avgCookieBought: 1.2,
+//   cookiesBought: [],
+//   total: 0,
+//   customerPerHour: function () {
+//     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+//   },
+//   cookieSales: function () {
+//     for (let i = 0; i < hours.length; i++) {
+//       let cookiesNeeded = this.customerPerHour() * this.avgCookieBought;
+//       this.cookiesBought.push(cookiesNeeded);
 //       this.total = this.total + cookiesNeeded;
 //     }
 //   }
