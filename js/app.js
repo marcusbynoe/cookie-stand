@@ -14,12 +14,24 @@ console.dir(cookieStore);
 
 
 //****** RENDERING *********/
-function hearder (){
+function header (){
   let trElem = document.createElement('tr');
-  
-}
+  cookieStore.appendChild(trElem);
+
+  let thElem = document.createElement('th');
+  trElem.appendChild(thElem);
+  thElem.textContent = '';
+
+  for(let i = 0; i < hours.length; i++){
+    let thHourElem = document.createElement('th');
+    trElem.appendChild(thHourElem);
+    thHourElem.textContent = hours[i];
+  }
+
+};
 
 
+header();
 // ****CONSTRUCTOR FUNCTION*****
 
 function City(name, minCust, maxCust, avgCookieBought) {
@@ -52,7 +64,21 @@ City.prototype.cookiesSold = function () {
   }
 };
 
+City.prototype.cityRender = function(){
+  let trCityElem = document.createElement('tr');
+  cookieStore.appendChild(trCityElem);
 
+  let thCityElem = document.createElement('th');
+  trCityElem.appendChild(thCityElem);
+  thCityElem.textContent = this.name;
+
+  for(let i = 0; i < hours.length; i++){
+    let dataElem = document.createElement('td');
+    trCityElem.appendChild(dataElem);
+    dataElem.textContent = this.cookiesBought[i];
+
+  }
+};
 
 
 
@@ -64,11 +90,11 @@ dubai.cookiesSold();
 paris.cookiesSold();
 lima.cookiesSold();
 
-seattle.render();
-tokyo.render();
-dubai.render();
-paris.render();
-lima.render();
+seattle.cityRender();
+tokyo.cityRender();
+dubai.cityRender();
+paris.cityRender();
+lima.cityRender();
 
 
 
