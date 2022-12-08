@@ -10,10 +10,15 @@ let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 
 let cookieStore = document.getElementById('stores');
 
+console.dir(cookieStore);
 
-// ***** DOM MANIPULATION *****
 
-let table1 = document.createElement('tr');
+//****** RENDERING *********/
+function hearder (){
+  let trElem = document.createElement('tr');
+  
+}
+
 
 // ****CONSTRUCTOR FUNCTION*****
 
@@ -35,13 +40,35 @@ let lima = new City('Lima', 2, 16, 4.6);
 
 // *****PROTOTYPE METHODS******
 
-City.prototype.getTotal = function () {
-  return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+City.prototype.getTotal = function (min, max){
+  return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-City.prototype.cookie
-// **** TABLE *****
+City.prototype.cookiesSold = function () {
+  for (let i = 0; i < hours.length; i++) {
+    let cookies = Math.floor(this.getTotal(this.minCust, this.maxCust) * this.avgCookieBought);
+    this.cookiesBought.push(cookies);
+    this.total = this.total + this.cookiesBought[i];
+  }
+};
 
+
+
+
+
+// ***** EXECUTABLE CODE ********
+
+seattle.cookiesSold();
+tokyo.cookiesSold();
+dubai.cookiesSold();
+paris.cookiesSold();
+lima.cookiesSold();
+
+seattle.render();
+tokyo.render();
+dubai.render();
+paris.render();
+lima.render();
 
 
 
