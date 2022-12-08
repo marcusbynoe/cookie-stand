@@ -28,7 +28,7 @@ function header (){
     thHourElem.textContent = hours[i];
   }
 
-}
+};
 
 
 header();
@@ -71,7 +71,14 @@ City.prototype.cityRender = function(){
   let thCityElem = document.createElement('th');
   trCityElem.appendChild(thCityElem);
   thCityElem.textContent = this.name;
-}
+
+  for(let i = 0; i < hours.length; i++){
+    let dataElem = document.createElement('td');
+    trCityElem.appendChild(dataElem);
+    dataElem.textContent = this.cookiesBought[i];
+
+  }
+};
 
 
 
