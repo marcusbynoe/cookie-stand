@@ -1,6 +1,7 @@
 
 header {
-  background-color: darkred;
+  background: rgb(215,3,3);
+background: linear-gradient(90deg, rgba(215,3,3,1) 30%, rgba(0,212,255,1) 100%);
   border-radius: 50px;
   border: 10px solid;
 }
@@ -26,8 +27,8 @@ h1 {
 }
 
 body {
-  background: rgb(18,141,177);
-  background: linear-gradient(0deg, rgba(18,141,177,1) 0%, rgba(19,254,255,1) 100%);
+  background: rgb(18,45,177);
+  background: linear-gradient(0deg, rgba(18,45,177,1) 36%, rgba(19,254,255,1) 100%);
   margin-left: auto;
   margin-right: auto;
 }
