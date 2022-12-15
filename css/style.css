@@ -1,0 +1,125 @@
+
+header {
+  background-color: darkred;
+  border-radius: 50px;
+  border: 10px solid;
+}
+
+#links {
+  color: rgb(0, 0, 0);
+}
+
+header img {
+  width: 300px;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  font-size: x-large;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(11, 224, 224);
+}
+
+body {
+  background: rgb(18,141,177);
+  background: linear-gradient(0deg, rgba(18,141,177,1) 0%, rgba(19,254,255,1) 100%);
+}
+
+#slogan {
+text-align: center;
+border-style: groove;
+border-color: darkred;
+font-size: larger;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight: bolder;
+}
+
+#picGroup1 {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+#picGroup1 img {
+  display: flex;
+  border: 3px solid rgb(139, 13, 13);
+  align-content: center;
+  height: 215px;
+}
+
+#family {
+  flex-direction: column;
+  width: 400px;
+  background-color: white;
+  border: 3px solid darkred;
+  border-radius: 5px;
+  height: 85%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 150px;
+  width: 700px;
+  background-color: darkgray;
+}
+
+#family img{
+  height: 200px;
+ justify-content: center;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ border: 1px solid darkred;
+}
+
+#apparel {
+  flex-direction: column;
+  background-color: white;
+  border: 3px solid darkred;
+  border-radius: 5px;
+  height: 85%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+  width: 250px;
+  background-color: darkgray;
+}
+
+#apparel img {
+  height: 200px;
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid darkred;
+}
+
+#apparel p {
+  text-align: center;
+}
+
+#locations {
+  text-align: center;
+  margin-top: 75px;
+  font-size: x-large;
+}
+
+#Hours {
+  text-align: center;
+  margin-top: 75px;
+  font-size: large;
+
+}
+
+footer ul {
+  background-color: darkred;
+  border-radius: 50px;
+  border: 10px solid;
+}
+
+footer ul li {
+  font-size: large;
+}
