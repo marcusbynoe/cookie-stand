@@ -28,6 +28,8 @@ h1 {
 body {
   background: rgb(18,141,177);
   background: linear-gradient(0deg, rgba(18,141,177,1) 0%, rgba(19,254,255,1) 100%);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #slogan {
